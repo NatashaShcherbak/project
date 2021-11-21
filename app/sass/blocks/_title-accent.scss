@@ -1,0 +1,13 @@
+.title-accent {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: $accent;
+    margin: 5px 0 10px;
+}
+@media (min-width: 992px) {
+    .title-accent {
+        font-size: 42px;
+        line-height: 50px;
+    }
+}

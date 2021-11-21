@@ -1,0 +1,25 @@
+.slider-services-fon {
+    background: linear-gradient(205deg, $main 11.93%, $main 57.17%, $gradient-supersoft 87.46%);
+    background-color: $main;
+    position: relative;
+    border-radius: 0px 0px 12px 12px;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        height: 10px;
+        border-radius: 0px 0px 12px 12px;
+    }
+    &::before {
+        left: 20px;
+        bottom: -10px;
+        background-color: $grey-shadow;
+        width: calc(100% - 40px);
+    }
+    &::after {
+        background-color: $light-grey-shadow;
+        width: calc(100% - 80px);
+        left: 40px;
+        bottom: -20px;
+    }
+}

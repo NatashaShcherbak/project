@@ -1,0 +1,6 @@
+.modal-window {
+    display: none;
+    &.open {
+        display: block;
+    }
+}

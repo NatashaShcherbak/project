@@ -1,0 +1,42 @@
+.quality {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    &__text {
+        &-item {
+            padding-bottom: 18px;
+        }
+    }
+}
+@media (min-width: 768px) {
+    .quality {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        display: flex;
+        &__text {
+            width: 60%;
+            margin: 0 10px;
+        }
+        &__title {
+            width: 40%;
+            margin: 0 10px;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .quality {
+        justify-content: center;
+        padding-top: 80px;
+        padding-bottom: 75px;
+        &__text {
+            width: 49%;
+            margin: 0 20px;
+            &-item {
+                padding-bottom: 20px;
+            }
+        }
+        &__title {
+            width: 32%;
+            margin: 0 20px;
+        }
+    }
+}

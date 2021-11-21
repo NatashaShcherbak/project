@@ -1,0 +1,26 @@
+.link-arrow {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $accent-active;
+    position: relative;
+    padding-right: 17px;
+    &:hover {
+        color: $accent;
+        margin-left: 10px;
+        transition-duration: 1s;
+        transition-property: margin-left;
+        & .link-arrow__svg {
+            stroke: $accent;
+        }
+    }
+    &__svg {
+        fill: none;
+        stroke: $accent-active;
+        position: absolute;
+        top: 2px;
+        right: 0;
+    }
+}

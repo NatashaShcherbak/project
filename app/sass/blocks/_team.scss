@@ -1,0 +1,79 @@
+.team {
+    padding-top: 40px;
+    padding-bottom: 15px;
+    &__card {
+        background: $grey-bg;
+        border-radius: 12px;
+        padding: 20px 0 20px 20px;
+        display: grid;
+        grid-template-columns: 70px auto;
+        grid-template-rows: auto auto 1fr;
+    }
+    &__link {
+        grid-column: 1 / 3;
+        justify-self: start;
+    }
+    &__title {
+        grid-column: 1 / 3;
+    }
+    &__img {
+        display: flex;
+        align-items: center;
+        & img {
+            max-width: 100%;
+            border-radius: 120px;
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__name {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: $grey-text;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 22px;
+        color: $grey-text;
+    }
+}
+.team .slick-slider .team__card {
+    display: grid;
+}
+@media (min-width: 992px) {
+    .team {
+        padding-top: 70px;
+        padding-bottom: 50px;
+        &__card {
+            grid-template-columns: auto auto;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        &__link {
+            grid-column: 2 / 3;
+            margin-top: 40px;
+        }
+        &__title {
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+        }
+        &__img {
+            grid-row: 1 / 4;
+            padding-right: 40px;
+            & img {
+                border-radius: 12px 0 0 12px;
+            }
+        }
+        &__item {
+            justify-content: flex-start;
+            padding-top: 10px;
+        }
+        &__name {
+            margin-bottom: 5px;
+        }
+    }
+}

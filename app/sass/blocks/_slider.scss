@@ -1,0 +1,95 @@
+.slider {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &__link-item {
+        display: none;
+    }
+    &__card {
+        display: none;
+        margin-bottom: 19px;
+        &.active {
+            display: block;
+        }
+        &-item {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $accent;
+            margin-bottom: 9px;
+        }
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+        color: $white;
+    }
+    &__text {
+        font-size: 18px;
+        line-height: 26px;
+        color: $white;
+        margin-top: 13px;
+    }
+}
+@media (min-width: 992px) {
+    .slider {
+        display: flex;
+        align-items: center;
+        padding-top: 78px;
+        &__link {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-right: 40px;
+            &-item {
+                background: inherit;
+                border: none;
+                display: block;
+                cursor: pointer;
+                font-weight: 700;
+                font-size: 42px;
+                line-height: 50px;
+                text-transform: none;
+                text-align: end;
+                color: $grey-text;
+                padding: 0 44px 22px 0;
+                position: relative;
+                &:hover {
+                    color: $accent;
+                }
+                &::after {
+                    content: "";
+                    width: 4px;
+                    height: 100%;
+                    position: absolute;
+                    background-color: $grey-separator;
+                    top: 0;
+                    right: 0;
+                }
+                &.active {
+                    color: $accent;
+                    &::after {
+                        background-color: $accent;
+                    }
+                }
+            }
+        }
+        &__card {
+            width: 57%;
+            &-item {
+                display: none;
+            }
+        }
+        &__title {
+            font-size: 32px;
+            line-height: 38px;
+        }
+        &__text {
+            font-size: 21px;
+            line-height: 30px;
+            margin-top: 30px;
+        }
+    }
+}

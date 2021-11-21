@@ -1,0 +1,36 @@
+@import "variables";
+@import "fonts";
+@import "main";
+
+@import "./blocks/header-banner-fon";
+@import "./blocks/header-service-fon";
+@import "./blocks/header";
+@import "./blocks/banner";
+@import "./blocks/slider-services-fon";
+@import "./blocks/slider";
+@import "./blocks/slider-dots";
+@import "./blocks/slick-dots";
+@import "./blocks/services";
+@import "./blocks/team";
+@import "./blocks/case";
+@import "./blocks/partner";
+@import "./blocks/publication";
+@import "./blocks/link-arrow";
+@import "./blocks/title-accent";
+@import "./blocks/footer";
+@import "./blocks/header-page";
+@import "./blocks/service-banner";
+@import "./blocks/service-item";
+@import "./blocks/service-case";
+@import "./blocks/modal-window";
+@import "./blocks/modal";
+@import "./blocks/mask";
+@import "./blocks/light-page";
+@import "./blocks/about";
+@import "./blocks/text";
+@import "./blocks/team-photo";
+@import "./blocks/quality";
+@import "./blocks/achievements";
+@import "node_modules/slick-carousel/slick/slick.scss";
+
+

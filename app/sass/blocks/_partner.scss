@@ -1,0 +1,95 @@
+.partner {
+    padding-top: 52px;
+    & .container {
+        max-width: 100%;
+    }
+    &__title {
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+        color: $main;
+        margin-bottom: 29px;
+    }
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -20px;
+    }
+    &__item {
+        background-color: $hillel;
+        height: 90px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_blue-green {
+            background-color: $wannabiz;
+        }
+        &_orange {
+            background-color: $targerine;
+        }
+        &_purple {
+            background-color: $look;
+        }
+        &_light-orange {
+            background-color: $orangear;
+        }
+        &_grey {
+            background-color: $adtelligent;
+        }
+        &_red {
+            background-color: $clickky;
+        }
+        &_light-blue {
+            background-color: $ecolease;
+        }
+        &_light-grey {
+            background-color: $infratek;
+        }
+        &_dark-purple {
+            background-color: $city-park;
+        }
+        &_blue {
+            background-color: $art-print;
+        }
+        &_black {
+            background-color: $black;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .partner__item {
+        width: 25%;
+        height: 120px;
+        &_orange img {
+            width: 179px;
+            height: 44px;
+        }
+        &_purple img {
+            width: 180px;
+            height: 42px;
+        }
+        &_light-orange img {
+            width: 174px;
+            height: 44px;
+        }
+        &_grey img {
+            width: 187px;
+            height: 48px;
+        }
+        &_red img {
+            width: 138px;
+            height: 61px;
+        }
+        &_light-blue img {
+            width: 146px;
+            height: 76px;
+        }
+        &_dark-purple img {
+            width: 181px;
+            height: 38px;
+        }
+    }
+}

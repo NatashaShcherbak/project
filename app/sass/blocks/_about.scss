@@ -1,0 +1,86 @@
+.about {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    &__item-text {
+        padding: 10px 0;
+    }
+    &__list {
+        padding-top: 5px;
+        border-top: 4px solid $grey-separator;
+        margin-top: 5px;
+        &-title {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 42px;
+            color: $accent;
+            padding: 10px 0 10px 39px;
+            position: relative;
+            &::before {
+                content: "";
+                background-image: url(../img/experience.svg);
+                width: 32px;
+                height: 32px;
+                position: absolute;
+                top: 15px;
+                left: 0;
+            }
+            &_bg-client::before {
+                background-image: url(../img/clients.svg);
+            }
+            &_bg-probono::before {
+                background-image: url(../img/pro-bono.svg);
+            }
+        }
+        &-text {
+            font-size: 18px;
+            line-height: 21px;
+            color: $main;
+            padding-bottom: 10px;
+        }
+    }
+}
+@media (min-width: 768px) {
+    .about {
+        padding-top: 40px;
+        padding-bottom: 60px;
+        display: flex;
+        &__item {
+            margin-right: 16px;
+            width: 60%;
+        }
+        &__list {
+            border-top: none;
+            align-self: flex-start;
+            margin-left: 16px;
+            border-left: 4px solid $grey-separator;
+            padding: 0 0 0 10px;
+            width: 40%;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .about {
+        padding-top: 65px;
+        padding-bottom: 90px;
+        justify-content: center;
+        &__item {
+            width: 47%;
+            margin-right: 31px;
+        }
+        &__list {
+            width: 31%;
+            margin-left: 31px;
+            margin-top: 15px;
+            padding: 0 0 0 20px;
+            &-title {
+                padding-top: 0;
+                &::before {
+                    top: 5px;
+                }
+            }
+            &-text {
+                padding-bottom: 35px;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.light-page {
+    & .header-page__text {
+        color: $main;
+    }
+    & .header__btn {
+        background-image: url(../img/hamburger.svg);
+        &.active {
+            background-image: url(../img/close.svg);
+            background-color: $grey-bg-alt;
+            border-radius: 12px;
+        }
+    }
+}
+@media (min-width: 768px) {
+    .light-page {
+        & .header__lang a {
+            color: $grey-text;
+            &.active {
+                color: $white;
+            }
+        }
+        & .header__address {
+            color: $grey-text;
+        }
+        & .header__tel {
+            color: $grey-text;
+        }
+        & .header__nav a {
+            color: $accent-active;
+            &:hover {
+                color: $accent;
+            }
+            &.active {
+                color: $accent;
+                border-bottom: 2px solid $accent;
+            }
+        }
+    }
+}

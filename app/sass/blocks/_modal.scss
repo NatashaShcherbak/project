@@ -1,0 +1,138 @@
+.modal {
+    background: $grey-bg;
+    padding: 17px 12px 85px 20px;
+    width: 375px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: auto auto;
+    &__form {
+        display: flex;
+        flex-direction: column;
+        padding-right: 8px;
+        grid-column: 1 / 3;
+        &-text {
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            font-family: inherit;
+            font-size: 18px;
+            line-height: 26px;
+            color: $black;
+            &::placeholder {
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 26px;
+                color: $grey-text;
+                opacity: 1;
+            }
+            &_height {
+                height: 47px;
+            }
+        }
+        &-btn {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            color: $white;
+            cursor: pointer;
+            background: $accent-active;
+            box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+            border-radius: 12px;
+            border: none;
+            margin: 14px auto 0;
+            padding: 17px 70px;
+            &_hidden {
+                display: none;
+            }
+            // &.sending {
+            //     display: block;
+            //     background-image: url(../img/ellipse.svg);
+            //     background-repeat: no-repeat;
+            //     background-position: center;
+            //     background-color: inherit;
+            //     box-shadow: none;
+            //     animation-name: ellipse;
+            //     animation-duration: 2s;
+            //     animation-iteration-count: infinite;
+            // }
+            // &.sent {
+            //     display: block;
+            //     background-color: $grey-bg-alt;
+            //     box-shadow: none;
+            //     color: $main;
+            //     padding: 17px 99px;
+            // }
+        }
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+        color: $accent;
+        margin-bottom: 10px;
+    }
+    &__btn {
+        border: none;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        background-image: url(../img/close.svg);
+        background-position: center;
+        background-color: inherit;
+        justify-self: end;
+        align-self: start;
+        &:active {
+            background-color: $grey-bg-alt;
+            border-radius: 12px;
+        }
+    }
+    &__text {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $grey-text;
+        margin: 12px 0 18px 10px;
+    }
+    &__contact {
+        margin: 4px 0;
+    }
+    & input:invalid {
+        border: 2px solid $accent;
+    }
+}
+@media (min-width: 992px) {
+    .modal {
+        border-radius: 12px;
+        filter: drop-shadow(0px 15px 80px rgba(40, 40, 86, 0.5));
+        width: 527px;
+        padding: 20px 15px 20px 20px;
+        &__title {
+            font-size: 32px;
+            line-height: 38px;
+        }
+        &__form-btn {
+            margin-top: 10px;
+        }
+        &__text {
+            margin-bottom: 0;
+        }
+        &__contact {
+            margin: 10px 0;
+        }
+    }
+}
+@keyframes ellipse {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

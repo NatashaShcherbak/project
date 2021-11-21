@@ -1,0 +1,28 @@
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    & button {
+        border: none;
+        background: $accent-active;
+        border-radius: 50%;
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        text-indent: 10px;
+        overflow: hidden;
+        margin: 0 7px;
+        opacity: 0.2;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+.slick-active button {
+    opacity: 1;
+}
+@media (min-width: 992px) {
+    .slick-dots {
+        margin-top: 0;
+    }
+}

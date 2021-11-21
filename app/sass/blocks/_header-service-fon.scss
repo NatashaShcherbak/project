@@ -1,0 +1,11 @@
+.header-service-fon {
+    background: url(../img/bg-services.jpg) no-repeat top center,
+    linear-gradient(180deg, rgba(50, 50, 100, 0.1) 0%, $main 100%);
+    background-size: cover;
+    background-color: $main;
+}
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+    .header-service-fon {
+        background-image: url(../img/bg-services@2x.jpg);
+    }
+}

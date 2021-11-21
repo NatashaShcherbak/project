@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+<clipPath id="clip0_0:3627">
+<rect width="24" height="24" fill="white" transform="translate(0.458008 0.870117)"/>
+</clipPath>
+</defs><symbol id="arrow" viewBox="0 0 20 12">
+<path d="M1 1L10 10L19 1" stroke="white" stroke-width="2"/>
+</symbol><symbol id="facebook" viewBox="0 0 25 25">
+<g clip-path="url(#clip0_0:3627)">
+<path d="M24.458 12.9435C24.458 6.27553 19.0854 0.870117 12.458 0.870117C5.83059 0.870117 0.458008 6.27553 0.458008 12.9435C0.458008 18.9696 4.84623 23.9644 10.583 24.8701V16.4334H7.53613V12.9435H10.583V10.2835C10.583 7.25767 12.3745 5.58626 15.1156 5.58626C16.4285 5.58626 17.8018 5.82207 17.8018 5.82207V8.79324H16.2886C14.7979 8.79324 14.333 9.72391 14.333 10.6787V12.9435H17.6611L17.1291 16.4334H14.333V24.8701C20.0698 23.9644 24.458 18.9696 24.458 12.9435Z"/>
+</g>
+
+</symbol><symbol id="link-arrow" viewBox="0 0 12 12">
+<path d="M3.5 1.5L8 6L3.5 10.5" stroke-width="2"/>
+</symbol></svg>
