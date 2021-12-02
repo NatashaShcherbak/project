@@ -93,7 +93,8 @@
         z-index: 10;
         display: none;
         &.show {
-            display: block;
+            display: flex;
+            flex-direction: column;
         }
         &-item {
             height: 16px;

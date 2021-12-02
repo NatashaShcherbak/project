@@ -212,7 +212,13 @@ ul {
 }
 
 .header__nav.show {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .header__nav-item {
@@ -717,7 +723,6 @@ ul {
 
 .services__card {
   margin: 21px 0;
-  width: 335px;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
@@ -780,7 +785,7 @@ ul {
     margin: 0 -20px;
   }
   .services__card {
-    width: 33%;
+    width: 33.333%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -951,7 +956,7 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 335px;
+  width: 100%;
   background-color: #F5F5FA;
   border: 1px solid #FFFFFF;
   padding: 19px 20px;
@@ -977,6 +982,18 @@ ul {
   .case__link {
     width: 50%;
   }
+  .case__link:first-of-type {
+    border-radius: 12px 0 0 0;
+  }
+  .case__link:nth-of-type(2) {
+    border-radius: 0 12px 0 0;
+  }
+  .case__link:last-of-type {
+    border-radius: 0 0 12px 0;
+  }
+  .case__link:nth-last-of-type(2) {
+    border-radius: 0 0 0 12px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -989,14 +1006,14 @@ ul {
     width: 33.3%;
     padding: 19px 120px 19px 20px;
   }
-  .case__link:first-of-type {
-    border-radius: 12px 0 0 0;
+  .case__link:nth-of-type(2) {
+    border-radius: 0;
   }
   .case__link:nth-of-type(3) {
     border-radius: 0 12px 0 0;
   }
-  .case__link:last-of-type {
-    border-radius: 0 0 12px 0;
+  .case__link:nth-last-of-type(2) {
+    border-radius: 0;
   }
   .case__link:nth-last-of-type(3) {
     border-radius: 0 0 0 12px;
@@ -1141,10 +1158,13 @@ ul {
 
 .publication__wrap {
   margin-bottom: 30px;
-  width: 335px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .publication__wrap_hidden-mobile {

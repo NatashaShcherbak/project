@@ -7,8 +7,9 @@
     }
     &__wrap {
         margin-bottom: 30px;
-        width: 335px;
+        width: 100%;
         display: flex;
+        justify-content: center;
         &_hidden-mobile {
             display: none;
         }

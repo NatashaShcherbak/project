@@ -19,7 +19,7 @@
         color: $main-soft;
         display: flex;
         flex-direction: column;
-        width: 335px;
+        width: 100%;
         background-color: $grey-bg;
         border: 1px solid $white;
         padding: 19px 20px;
@@ -40,6 +40,18 @@
 @media (min-width: 768px) {
     .case__link {
         width: 50%;
+        &:first-of-type {
+            border-radius: 12px 0 0 0;
+        }
+        &:nth-of-type(2) {
+            border-radius: 0 12px 0 0;
+        }
+        &:last-of-type {
+            border-radius: 0 0 12px 0;
+        }
+        &:nth-last-of-type(2) {
+            border-radius: 0 0 0 12px;
+        }
     }
 }
 @media (min-width: 992px) {
@@ -50,14 +62,14 @@
             line-height: 28px;
             width: 33.3%;
             padding: 19px 120px 19px 20px;
-            &:first-of-type {
-                border-radius: 12px 0 0 0;
+            &:nth-of-type(2) {
+                border-radius: 0;
             }
             &:nth-of-type(3) {
                 border-radius: 0 12px 0 0;
             }
-            &:last-of-type {
-                border-radius: 0 0 12px 0;
+            &:nth-last-of-type(2) {
+                border-radius: 0;
             }
             &:nth-last-of-type(3) {
                 border-radius: 0 0 0 12px;
