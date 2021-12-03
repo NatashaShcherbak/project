@@ -4,6 +4,7 @@ const linkElement = document.getElementById('link');
 const modalElement = document.getElementById('modal-window');
 const closeElement = document.getElementById('close-btn');
 const maskElement = document.getElementById('mask');
+const header_maskElement = document.getElementById('header-mask');
 
 $('.slick-slider').slick({
     dots: true,
@@ -36,6 +37,7 @@ buttonElement.onclick = openMenu;
 function openMenu() {
     menuElement.classList.toggle('show');
     buttonElement.classList.toggle ('active');
+    header_maskElement.classList.toggle ('open');
 }
 
 linkElement.onclick = openModal;

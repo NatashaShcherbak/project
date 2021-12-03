@@ -76,6 +76,8 @@
         background-position: center;
         cursor: pointer;
         border: none;
+        position: relative;
+        z-index: 1000;
         &.active {
             background-image: url(../img/close.svg);
             background-color: $grey-bg-alt;
@@ -90,8 +92,8 @@
         position: absolute;
         right: 0;
         top: 40px;
-        z-index: 10;
         display: none;
+        z-index: 1000;
         &.show {
             display: flex;
             flex-direction: column;
@@ -118,6 +120,12 @@
             &:hover {
                 color: $accent;
             }
+        }
+    }
+    &__mask {
+        display: none;
+        &.open {
+            display: block;
         }
     }
 }

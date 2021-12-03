@@ -1,4 +1,10 @@
 .header-banner-fon {
-    background: linear-gradient(30deg, $main 14.33%, $main 51.39%, $gradient-soft 87.53%);
+    background: url(../img/logo-p.svg) no-repeat bottom center, linear-gradient(30deg, $main 14.33%, $main 51.39%, $gradient-soft 87.53%);
     background-color: $main;
+}
+@media (min-width: 992px) {
+    .header-banner-fon {
+        background: url(../img/logo-p.svg) bottom left 46%, url(../img/logo-pattern.svg) bottom center, linear-gradient(30deg, $main 14.33%, $main 51.39%, $gradient-soft 87.53%);
+        background-repeat: no-repeat;
+    }
 }

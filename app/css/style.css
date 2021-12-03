@@ -60,8 +60,15 @@ ul {
 }
 
 .header-banner-fon {
-  background: linear-gradient(30deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+  background: url(../img/logo-p.svg) no-repeat bottom center, linear-gradient(30deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
   background-color: #323264;
+}
+
+@media (min-width: 992px) {
+  .header-banner-fon {
+    background: url(../img/logo-p.svg) bottom left 46%, url(../img/logo-pattern.svg) bottom center, linear-gradient(30deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+    background-repeat: no-repeat;
+  }
 }
 
 .header-service-fon {
@@ -190,6 +197,8 @@ ul {
   background-position: center;
   cursor: pointer;
   border: none;
+  position: relative;
+  z-index: 1000;
 }
 
 .header__btn.active {
@@ -207,8 +216,8 @@ ul {
   position: absolute;
   right: 0;
   top: 40px;
-  z-index: 10;
   display: none;
+  z-index: 1000;
 }
 
 .header__nav.show {
@@ -252,6 +261,14 @@ ul {
 
 .header__nav a:hover {
   color: #F0145A;
+}
+
+.header__mask {
+  display: none;
+}
+
+.header__mask.open {
+  display: block;
 }
 
 @media (min-width: 768px) {
@@ -380,15 +397,7 @@ ul {
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 335px;
-  position: relative;
   margin: auto;
-}
-
-.banner__wrap img {
-  max-width: 100%;
-  position: absolute;
-  bottom: 2%;
-  right: 20%;
 }
 
 .banner__title {
@@ -398,8 +407,6 @@ ul {
   line-height: 45px;
   color: #FFFFFF;
   text-align: center;
-  position: relative;
-  z-index: 2;
 }
 
 .banner__link {
@@ -411,8 +418,6 @@ ul {
   border: 1px solid #FFFFFF;
   border-radius: 50%;
   margin: auto;
-  position: relative;
-  z-index: 2;
 }
 
 .banner__link-svg {
@@ -434,15 +439,9 @@ ul {
 @media (min-width: 992px) {
   .banner {
     padding-top: 235px;
-    background-image: url(../img/logo-pattern.svg);
-    background-repeat: no-repeat;
-    background-position: center;
   }
   .banner__wrap {
     max-width: 600px;
-  }
-  .banner__wrap img {
-    right: 28%;
   }
   .banner__title {
     margin-bottom: 288px;
@@ -723,18 +722,41 @@ ul {
 
 .services__card {
   margin: 21px 0;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
 }
 
-.services__card img {
-  background-color: #FFFFFF;
-  border-radius: 18px;
+.services__card-img {
   width: 64px;
   height: 64px;
-  padding: 10px;
+  border-radius: 18px;
+  background-color: #FFFFFF;
+  background-image: url(../img/it-and-commerce.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 44px 44px;
+  display: inline-block;
+  vertical-align: middle;
   margin-right: 10px;
+}
+
+.services__card-img_daily-help {
+  background-image: url(../img/daily-help.svg);
+}
+
+.services__card-img_structuring {
+  background-image: url(../img/structuring.svg);
+}
+
+.services__card-img_hand-together {
+  background-image: url(../img/hand-together.svg);
+}
+
+.services__card-img_security-protection {
+  background-image: url(../img/security-protection.svg);
+}
+
+.services__card-img_lawyer {
+  background-image: url(../img/lawyer.svg);
+  background-size: 36px 37px;
 }
 
 .services__card-title {
@@ -742,8 +764,9 @@ ul {
   font-size: 18px;
   line-height: 21px;
   color: #24A3FF;
-  -ms-flex-item-align: center;
-      align-self: center;
+  display: inline-block;
+  vertical-align: middle;
+  width: 70%;
 }
 
 .services__card-title:hover {
@@ -759,7 +782,6 @@ ul {
   line-height: 22px;
   color: #FFFFFF;
   margin-top: 8px;
-  grid-column: 1 / 3;
 }
 
 @media (min-width: 768px) {
@@ -796,19 +818,22 @@ ul {
     padding: 66px 20px 0;
     margin: 0;
   }
-  .services__card img {
+  .services__card-img {
     width: 92px;
     height: 92px;
-    padding: 14px;
     border-radius: 24px;
+    background-size: 64px 64px;
     margin-bottom: 20px;
+  }
+  .services__card-img_lawyer {
+    background-size: 48px 48px;
   }
   .services__card-title {
     font-size: 24px;
     line-height: 28px;
-    position: static;
     -ms-flex-item-align: start;
         align-self: flex-start;
+    width: 100%;
   }
   .services__card-text {
     font-size: 18px;
